@@ -42,7 +42,6 @@ nav{position:sticky;top:0;z-index:100;background:rgba(8,12,23,.95);backdrop-filt
 .mobile-menu a{color:var(--text2);font-size:14px;padding:6px 0;border-bottom:1px solid var(--border)}
 .mobile-menu a:hover{color:var(--text)}
 
-/* HERO */
 .hero{position:relative;min-height:400px;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;padding:80px 20px 40px;z-index:1}
 @media(min-width:768px){.hero{min-height:680px;padding:80px 24px 40px}}
 .hero-bg{position:absolute;inset:0;z-index:0}
@@ -77,7 +76,6 @@ h1{font-size:clamp(28px,5vw,48px);font-weight:900;line-height:1.2;letter-spacing
 .hnum-label{font-size:10px;color:var(--text3);margin-top:2px;letter-spacing:.7px;text-transform:uppercase}
 @media(min-width:768px){.hnum-label{font-size:11px;margin-top:3px}}
 
-/* TICKER */
 .ticker-section{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:16px 20px 0;overflow:hidden}
 @media(min-width:768px){.ticker-section{padding:24px 52px 0}}
 .ticker-header{display:flex;align-items:center;justify-content:space-between;padding-bottom:0;flex-wrap:wrap;gap:12px}
@@ -120,6 +118,7 @@ h1{font-size:clamp(28px,5vw,48px);font-weight:900;line-height:1.2;letter-spacing
 .node-bar{margin-top:10px;height:3px;border-radius:2px;background:var(--border);overflow:hidden}
 @media(min-width:768px){.node-bar{margin-top:12px}}
 .node-bar-fill{height:100%;border-radius:2px;background:linear-gradient(90deg,var(--green),var(--accent3));transition:width .5s}
+.node-bar-fill.ru{background:linear-gradient(90deg,#F05B5B,#F6A623)}
 
 section{padding:30px 16px}
 @media(min-width:768px){section{padding:40px 52px}}
@@ -226,7 +225,6 @@ section{padding:30px 16px}
 .feat p{font-size:10px;color:var(--text2);line-height:1.4}
 @media(min-width:768px){.feat p{font-size:12px;line-height:1.5}}
 
-/* ===== КОРЗИНА ===== */
 .cart-overlay{position:fixed;inset:0;background:rgba(0,0,0,.8);backdrop-filter:blur(8px);z-index:200;display:none;align-items:center;justify-content:center;padding:16px}
 .cart-overlay.open{display:flex}
 .cart-modal{background:var(--bg2);border:1px solid var(--border);border-radius:14px;max-width:480px;width:100%;max-height:80vh;overflow-y:auto;padding:20px;animation:slideUp .3s ease}
@@ -256,7 +254,6 @@ section{padding:30px 16px}
 .btn-checkout{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff}
 .btn-clear{background:var(--card);color:var(--text2);border:1px solid var(--border)}
 
-/* ===== ЗАКАЗ ===== */
 .order-overlay{position:fixed;inset:0;background:rgba(0,0,0,.9);backdrop-filter:blur(12px);z-index:300;display:none;align-items:center;justify-content:center;padding:16px}
 .order-overlay.open{display:flex}
 .order-modal{background:var(--bg2);border:1px solid var(--border);border-radius:14px;max-width:420px;width:100%;max-height:90vh;overflow-y:auto;padding:20px;animation:slideUp .3s ease}
@@ -289,22 +286,6 @@ section{padding:30px 16px}
 @media(min-width:768px){.notif-icon{font-size:16px;margin-right:8px}}
 .notif-text{font-weight:500}
 
-/* ===== СТРАНИЦЫ ДОКУМЕНТАЦИИ ===== */
-.doc-page{display:none;position:fixed;inset:0;z-index:999;background:var(--bg);padding:80px 20px 20px;overflow-y:auto}
-.doc-page.open{display:block}
-.doc-page .close-btn{position:fixed;top:70px;right:20px;background:var(--card);border:1px solid var(--border);border-radius:50%;width:40px;height:40px;display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--text2);cursor:pointer;z-index:1000}
-.doc-page .close-btn:hover{color:var(--text);border-color:var(--accent)}
-.doc-page .doc-content{max-width:800px;margin:0 auto}
-.doc-page h1{font-size:32px;margin-bottom:20px}
-.doc-page h2{font-size:22px;margin:24px 0 12px;color:var(--accent)}
-.doc-page p{font-size:15px;color:var(--text2);line-height:1.8;margin-bottom:12px}
-.doc-page ul{list-style:none;margin:12px 0}
-.doc-page ul li{padding:8px 0 8px 24px;color:var(--text2);font-size:14px;border-bottom:1px solid var(--border);position:relative}
-.doc-page ul li::before{content:'▸';position:absolute;left:0;color:var(--accent)}
-.doc-page .highlight{background:var(--card);border-left:3px solid var(--accent);padding:16px 20px;border-radius:0 8px 8px 0;margin:16px 0}
-.doc-page .highlight p{color:var(--text);margin:0}
-
-/* ===== ФУТЕР (КЛИКАБЕЛЬНЫЙ) ===== */
 footer{background:var(--bg2);border-top:1px solid var(--border);padding:24px 16px 14px}
 @media(min-width:768px){footer{padding:36px 52px 24px}}
 .footer-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:1140px;margin:0 auto}
@@ -320,7 +301,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:24px 16p
 @media(min-width:768px){.footer-bottom{flex-direction:row;justify-content:space-between;font-size:11px;margin-top:24px;padding-top:16px}}
 .footer-bottom .legal{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
 @media(min-width:768px){.footer-bottom .legal{gap:14px}}
-.footer-bottom .legal a{color:var(--text3);transition:.15s;cursor:pointer}
+.footer-bottom .legal a{color:var(--text3);transition:.15s}
 .footer-bottom .legal a:hover{color:var(--accent)}
 .footer-logo-bottom{font-size:16px;font-weight:900;margin-bottom:2px}
 @media(min-width:768px){.footer-logo-bottom{font-size:20px;margin-bottom:4px}}
@@ -332,7 +313,6 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:24px 16p
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="logo"><div class="logo-icon">⚡</div>VoltNode</div>
   <div class="nav-links">
@@ -350,198 +330,17 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:24px 16p
   </div>
 </nav>
 
-<!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
   <a href="#constructor" onclick="closeMobileMenu()">Конструктор</a>
   <a href="#tariffs" onclick="closeMobileMenu()">Тарифы</a>
   <a href="#features" onclick="closeMobileMenu()">Возможности</a>
 </div>
 
-<!-- NOTIFICATION -->
 <div class="notification" id="notification">
   <span class="notif-icon" id="notifIcon">✅</span>
   <span class="notif-text" id="notifText">Товар добавлен</span>
 </div>
 
-<!-- ===== СТРАНИЦЫ ДОКУМЕНТАЦИИ ===== -->
-<div class="doc-page" id="docAbout">
-  <button class="close-btn" onclick="closeDoc()">✕</button>
-  <div class="doc-content">
-    <h1>📖 О компании VoltNode</h1>
-    <p><strong>VoltNode</strong> — это российская IT-компания, специализирующаяся на предоставлении виртуальных выделенных серверов (VPS/VDS) мирового уровня. Мы работаем с <strong>2015 года</strong> и за это время помогли более <strong>1 000 000 клиентов</strong> по всему миру запустить свои проекты — от небольших блогов до крупных корпоративных систем.</p>
-    <p>Наша миссия — сделать облачные технологии доступными для каждого. Мы предлагаем <strong>высокопроизводительные серверы</strong> по демократичным ценам, с посуточной оплатой и мгновенным развертыванием.</p>
-    <div class="highlight"><p>⚡ Сегодня VoltNode — это 18 дата-центров в 12 странах мира, 99.98% аптайм и поддержка 24/7.</p></div>
-    <p>Мы гордимся тем, что наши серверы выбирают стартапы, IT-компании, веб-студии и частные лица из России, Европы, США и Азии. Благодаря нам проекты взлетают в разы быстрее.</p>
-    <p><strong>Наши ценности:</strong> надежность, скорость, доступность и честность. Мы не скрываем условия, не ставим скрытых платежей и всегда готовы помочь клиенту с любым вопросом.</p>
-    <p>VoltNode — это не просто серверы. Это экосистема для роста вашего бизнеса в цифровом мире.</p>
-  </div>
-</div>
-
-<div class="doc-page" id="docNews">
-  <button class="close-btn" onclick="closeDoc()">✕</button>
-  <div class="doc-content">
-    <h1>📰 Новости компании</h1>
-    <p><strong>19 июня 2026</strong> — Мы запустили новый дата-центр в Токио! Теперь наши серверы доступны в Японии с пингом менее 140 мс для локальных пользователей.</p>
-    <p><strong>15 июня 2026</strong> — VoltNode вошел в топ-10 лучших VPS-провайдеров России по версии портала HostingRating.</p>
-    <p><strong>10 июня 2026</strong> — Мы снизили цены на тарифы "Pro" и "Business" на 15% для всех новых клиентов.</p>
-    <p><strong>5 июня 2026</strong> — Запущена обновленная версия панели управления с улучшенным интерфейсом и новыми функциями мониторинга.</p>
-    <p><strong>1 июня 2026</strong> — Компания VoltNode открыла представительство в Санкт-Петербурге.</p>
-    <p><strong>25 мая 2026</strong> — Мы добавили поддержку Windows Server 2025 в список доступных операционных систем.</p>
-    <p><strong>20 мая 2026</strong> — VoltNode стала партнером GitHub Education, предоставляя бесплатные серверы для студентов и преподавателей.</p>
-    <p><strong>15 мая 2026</strong> — Запущена программа лояльности для постоянных клиентов: скидки до 30% при оплате за год.</p>
-    <p><strong>10 мая 2026</strong> — Мы обновили DDoS-защиту до уровня 1 Тбит/с — теперь ваши проекты под надежной охраной.</p>
-    <p><strong>5 мая 2026</strong> — Открыт доступ к API версии 3.0 с расширенными возможностями управления серверами.</p>
-    <p><strong>1 мая 2026</strong> — VoltNode отмечает 11 лет на рынке! Спасибо всем нашим клиентам за доверие.</p>
-  </div>
-</div>
-
-<div class="doc-page" id="docCareers">
-  <button class="close-btn" onclick="closeDoc()">✕</button>
-  <div class="doc-content">
-    <h1>💼 Карьера в VoltNode</h1>
-    <p><strong>Присоединяйтесь к команде VoltNode!</strong> Мы всегда ищем талантливых специалистов, готовых расти и развиваться вместе с нами.</p>
-    <h2>Актуальные вакансии</h2>
-    <ul>
-      <li><strong>Разработчик бэкенда (Python/Go)</strong> — удаленная работа, опыт от 3 лет</li>
-      <li><strong>Системный администратор (Linux)</strong> — работа в офисе (Москва/СПб)</li>
-      <li><strong>Менеджер по продажам</strong> — удаленная работа, опыт в IT-продажах</li>
-      <li><strong>Специалист технической поддержки (24/7)</strong> — сменный график</li>
-      <li><strong>DevOps инженер</strong> — опыт с Kubernetes, Docker, CI/CD</li>
-      <li><strong>UI/UX дизайнер</strong> — портфолио обязательно</li>
-    </ul>
-    <h2>Что мы предлагаем</h2>
-    <ul>
-      <li>Официальное трудоустройство по ТК РФ</li>
-      <li>Конкурентоспособную зарплату</li>
-      <li>Гибкий график и возможность удаленной работы</li>
-      <li>ДМС, оплату спорта и обучения</li>
-      <li>Корпоративные мероприятия и тимбилдинги</li>
-      <li>Современное оборудование для работы</li>
-      <li>Карьерный рост до уровня Team Lead и выше</li>
-    </ul>
-    <p>Чтобы откликнуться на вакансию, напишите нам на <strong>hr@voltnode.ru</strong> с темой письма "Вакансия: [название позиции]". Приложите резюме и сопроводительное письмо.</p>
-    <p><em>Мы ждем именно вас! Станьте частью команды мирового уровня.</em></p>
-  </div>
-</div>
-
-<div class="doc-page" id="docProducts">
-  <button class="close-btn" onclick="closeDoc()">✕</button>
-  <div class="doc-content">
-    <h1>🖥️ Наши продукты</h1>
-    <p><strong>VoltNode предлагает полный спектр облачных решений для бизнеса любого масштаба.</strong></p>
-    <h2>VPS/VDS серверы</h2>
-    <p>Виртуальные выделенные серверы с гарантированной производительностью. Доступны в 18 дата-центрах по всему миру. От 200 ₽/месяц.</p>
-    <ul>
-      <li><strong>Starter</strong> — 1 vCPU, 512 MB RAM, 5 ГБ SSD — 200 ₽/мес</li>
-      <li><strong>Standard</strong> — 1 vCPU, 1 ГБ RAM, 15 ГБ SSD — 390 ₽/мес</li>
-      <li><strong>Advanced</strong> — 2 vCPU, 4 ГБ RAM, 50 ГБ SSD — 790 ₽/мес</li>
-      <li><strong>Pro</strong> — 4 vCPU, 8 ГБ RAM, 100 ГБ SSD — 1490 ₽/мес</li>
-      <li><strong>Business</strong> — 8 vCPU, 16 ГБ RAM, 200 ГБ SSD — 2890 ₽/мес</li>
-      <li><strong>Enterprise</strong> — 16 vCPU, 32 ГБ RAM, 500 ГБ SSD — 5990 ₽/мес</li>
-      <li><strong>Ultra</strong> — 32 vCPU, 64 ГБ RAM, 1 ТБ SSD — 11990 ₽/мес</li>
-      <li><strong>Mega</strong> — 64 vCPU, 128 ГБ RAM, 2 ТБ SSD — 24990 ₽/мес</li>
-    </ul>
-    <h2>Выделенные серверы</h2>
-    <p>Физические серверы для самых требовательных проектов. Полная мощность оборудования без виртуализации.</p>
-    <ul>
-      <li><strong>Dedicated Start</strong> — 4 vCPU, 16 ГБ RAM, 240 ГБ SSD — от 3999 ₽/мес</li>
-      <li><strong>Dedicated Pro</strong> — 8 vCPU, 32 ГБ RAM, 480 ГБ SSD — от 7999 ₽/мес</li>
-    </ul>
-    <h2>Дополнительные услуги</h2>
-    <ul>
-      <li>S3-хранилище — от 1.12 ₽/ГБ в месяц</li>
-      <li>Управляемые базы данных — от 2.69 ₽/мес</li>
-      <li>CDN ускорение — от 500 ₽/мес</li>
-      <li>Расширенная DDoS-защита — от 2550 ₽/мес</li>
-      <li>SSL-сертификаты — от 990 ₽/год</li>
-      <li>Регистрация доменов — от 890 ₽/год</li>
-    </ul>
-  </div>
-</div>
-
-<div class="doc-page" id="docSupport">
-  <button class="close-btn" onclick="closeDoc()">✕</button>
-  <div class="doc-content">
-    <h1>🛠️ Техническая поддержка</h1>
-    <p><strong>Мы всегда на связи и готовы помочь вам в любой ситуации!</strong></p>
-    <h2>Способы связи</h2>
-    <ul>
-      <li><strong>📧 Email:</strong> support@voltnode.ru — время ответа до 30 минут</li>
-      <li><strong>💬 Telegram:</strong> @VoltNodeSupport — быстрый ответ</li>
-      <li><strong>📞 Телефон:</strong> +7 (800) 555-06-75 — работает 24/7</li>
-      <li><strong>📝 Чат на сайте:</strong> В правом нижнем углу — ответ за 5 минут</li>
-      <li><strong>🐦 Twitter:</strong> @VoltNode — новости и акции</li>
-      <li><strong>📹 YouTube:</strong> VoltNode TV — видеоуроки и вебинары</li>
-    </ul>
-    <h2>Категории запросов</h2>
-    <ul>
-      <li><strong>Технические проблемы</strong> — сбой сервера, недоступность, DDoS-атака</li>
-      <li><strong>Вопросы по биллингу</strong> — оплата, выставление счетов, возвраты</li>
-      <li><strong>Настройка сервера</strong> — установка ОС, настройка ПО, миграция</li>
-      <li><strong>Общие вопросы</strong> — выбор тарифа, расширение, апгрейд</li>
-      <li><strong>Поиск информации</strong> — документация, статьи, база знаний</li>
-    </ul>
-    <div class="highlight"><p>⏱️ Время реакции — не более 15 минут для всех типов запросов.</p></div>
-    <p>Мы также предлагаем <strong>премиум-поддержку</strong> для критически важных проектов с гарантированным временем ответа 5 минут и персональным менеджером.</p>
-    <p>Все запросы регистрируются в нашей системе, и вы всегда можете отследить статус обращения в личном кабинете.</p>
-  </div>
-</div>
-
-<div class="doc-page" id="docPartners">
-  <button class="close-btn" onclick="closeDoc()">✕</button>
-  <div class="doc-content">
-    <h1>🤝 Партнёрская программа</h1>
-    <p><strong>Зарабатывайте вместе с VoltNode — до 25% от каждого платежа приведённого клиента!</strong></p>
-    <h2>Как это работает</h2>
-    <ul>
-      <li><strong>Шаг 1:</strong> Регистрируетесь в партнёрской программе через личный кабинет.</li>
-      <li><strong>Шаг 2:</strong> Получаете уникальную реферальную ссылку и промокод.</li>
-      <li><strong>Шаг 3:</strong> Рассказываете о VoltNode своим друзьям, коллегам, подписчикам.</li>
-      <li><strong>Шаг 4:</strong> Получаете 25% от каждого платежа приведённого клиента в течение 12 месяцев.</li>
-      <li><strong>Шаг 5:</strong> Выводите заработанные средства на карту, QIWI или криптовалюту.</li>
-    </ul>
-    <h2>Условия</h2>
-    <ul>
-      <li><strong>Ставка:</strong> 25% от чистой суммы платежа клиента</li>
-      <li><strong>Минимальная выплата:</strong> 500 ₽</li>
-      <li><strong>Период выплат:</strong> Еженедельно (по понедельникам)</li>
-      <li><strong>Срок действия реферальной ссылки:</strong> Бессрочно</li>
-      <li><strong>Количество клиентов:</strong> Неограниченно</li>
-      <li><strong>Партнёрская программа:</strong> Многоуровневая (бонус за привлечение партнёров)</li>
-    </ul>
-    <div class="highlight"><p>💰 Уже более 500 активных партнёров получают выплаты каждую неделю!</p></div>
-    <p>Присоединяйтесь к партнёрской программе VoltNode и начните зарабатывать уже сегодня. Мы предоставляем все необходимые инструменты и рекламные материалы.</p>
-    <p>По вопросам участия пишите на <strong>partners@voltnode.ru</strong>.</p>
-  </div>
-</div>
-
-<div class="doc-page" id="docContacts">
-  <button class="close-btn" onclick="closeDoc()">✕</button>
-  <div class="doc-content">
-    <h1>📞 Контакты</h1>
-    <p><strong>Свяжитесь с нами любым удобным способом!</strong></p>
-    <ul>
-      <li><strong>📍 Юридический адрес:</strong> 127051, Россия, г. Москва, ул. Петровка, д. 26, стр. 3</li>
-      <li><strong>📧 Email:</strong> info@voltnode.ru</li>
-      <li><strong>📞 Телефон:</strong> +7 (800) 555-06-75 (бесплатный звонок по РФ)</li>
-      <li><strong>💬 Telegram:</strong> @VoltNodeSupport (оперативный ответ)</li>
-      <li><strong>📱 WhatsApp:</strong> +7 (999) 123-45-67</li>
-      <li><strong>🐦 Twitter:</strong> @VoltNode</li>
-      <li><strong>📺 YouTube:</strong> VoltNode TV</li>
-      <li><strong>🌐 Сайт:</strong> https://voltnode.ru</li>
-    </ul>
-    <h2>График работы</h2>
-    <ul>
-      <li><strong>Техническая поддержка:</strong> 24/7, без выходных</li>
-      <li><strong>Отдел продаж:</strong> Пн-Пт 9:00-21:00 (МСК)</li>
-      <li><strong>Бухгалтерия:</strong> Пн-Пт 10:00-18:00 (МСК)</li>
-      <li><strong>Партнёрский отдел:</strong> Пн-Пт 10:00-20:00 (МСК)</li>
-    </ul>
-    <p>Мы всегда рады ответить на ваши вопросы и помочь с выбором оптимального решения для вашего бизнеса. Свяжитесь с нами, и мы предложим вам лучшие условия!</p>
-  </div>
-</div>
-
-<!-- ===== HERO ===== -->
 <div class="hero">
   <div class="hero-bg"><div class="grid-bg"></div><div class="glow1"></div><div class="glow2"></div></div>
   <div class="hero-content">
@@ -562,7 +361,6 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:24px 16p
   </div>
 </div>
 
-<!-- ===== TICKER ===== -->
 <div class="ticker-section" id="servers">
   <div class="ticker-header">
     <div>
@@ -580,7 +378,6 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:24px 16p
   </div>
 </div>
 
-<!-- ===== CONSTRUCTOR ===== -->
 <section id="constructor" style="background:var(--bg)">
   <div class="container">
     <div class="constructor-wrap">
@@ -675,51 +472,74 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:24px 16p
           <div style="font-size:10px;color:var(--text3);margin-top:3px">⚠️ Превышение трафика - 50₽ за 1 ГБ сверх лимита</div>
         </div>
 
+        <!-- ===== ОС С ЛОГОТИПАМИ ===== -->
         <div class="param-group">
           <label>🖥️ Операционная система</label>
           <div class="os-select-grid">
             <div class="os-opt active" onclick="setOS('Ubuntu 24.04 LTS', this)">
-              <span class="os-icon"><svg viewBox="0 0 26 26" width="28" height="28"><circle cx="13" cy="13" r="13" fill="#E95420"/><circle cx="13" cy="13" r="5" fill="none" stroke="#fff" stroke-width="2"/><circle cx="13" cy="5.5" r="2.2" fill="#fff"/><circle cx="20.1" cy="17.5" r="2.2" fill="#fff"/><circle cx="5.9" cy="17.5" r="2.2" fill="#fff"/></svg></span>
+              <span class="os-icon">
+                <svg viewBox="0 0 26 26" width="28" height="28"><circle cx="13" cy="13" r="13" fill="#E95420"/><circle cx="13" cy="13" r="5" fill="none" stroke="#fff" stroke-width="2"/><circle cx="13" cy="5.5" r="2.2" fill="#fff"/><circle cx="20.1" cy="17.5" r="2.2" fill="#fff"/><circle cx="5.9" cy="17.5" r="2.2" fill="#fff"/></svg>
+              </span>
               <span class="os-label">Ubuntu 24.04</span>
             </div>
             <div class="os-opt" onclick="setOS('Ubuntu 22.04 LTS', this)">
-              <span class="os-icon"><svg viewBox="0 0 26 26" width="28" height="28"><circle cx="13" cy="13" r="13" fill="#E95420"/><circle cx="13" cy="13" r="5" fill="none" stroke="#fff" stroke-width="2"/><circle cx="13" cy="5.5" r="2.2" fill="#fff"/><circle cx="20.1" cy="17.5" r="2.2" fill="#fff"/><circle cx="5.9" cy="17.5" r="2.2" fill="#fff"/></svg></span>
+              <span class="os-icon">
+                <svg viewBox="0 0 26 26" width="28" height="28"><circle cx="13" cy="13" r="13" fill="#E95420"/><circle cx="13" cy="13" r="5" fill="none" stroke="#fff" stroke-width="2"/><circle cx="13" cy="5.5" r="2.2" fill="#fff"/><circle cx="20.1" cy="17.5" r="2.2" fill="#fff"/><circle cx="5.9" cy="17.5" r="2.2" fill="#fff"/></svg>
+              </span>
               <span class="os-label">Ubuntu 22.04</span>
             </div>
             <div class="os-opt" onclick="setOS('Debian 12', this)">
-              <span class="os-icon"><svg viewBox="0 0 26 26" width="28" height="28"><circle cx="13" cy="13" r="13" fill="#D70A53"/><path d="M13 6c-3.86 0-7 3.14-7 7s3.14 7 7 7 7-3.14 7-7" stroke="#fff" stroke-width="2" fill="none"/><circle cx="13" cy="13" r="2.5" fill="#fff"/></svg></span>
+              <span class="os-icon">
+                <svg viewBox="0 0 26 26" width="28" height="28"><circle cx="13" cy="13" r="13" fill="#D70A53"/><path d="M13 6c-3.86 0-7 3.14-7 7s3.14 7 7 7 7-3.14 7-7" stroke="#fff" stroke-width="2" fill="none"/><circle cx="13" cy="13" r="2.5" fill="#fff"/></svg>
+              </span>
               <span class="os-label">Debian 12</span>
             </div>
             <div class="os-opt" onclick="setOS('CentOS 9 Stream', this)">
-              <span class="os-icon"><svg viewBox="0 0 26 26" width="28" height="28"><circle cx="13" cy="13" r="13" fill="#262577"/><path d="M13 4 L22 13 L13 22 L4 13Z" fill="none" stroke="#9B59B6" stroke-width="1.5"/><path d="M13 4 L13 22 M4 13 L22 13" stroke="#fff" stroke-width="1.2" opacity=".5"/><circle cx="13" cy="13" r="3" fill="#9B59B6"/></svg></span>
+              <span class="os-icon">
+                <svg viewBox="0 0 26 26" width="28" height="28"><circle cx="13" cy="13" r="13" fill="#262577"/><path d="M13 4 L22 13 L13 22 L4 13Z" fill="none" stroke="#9B59B6" stroke-width="1.5"/><path d="M13 4 L13 22 M4 13 L22 13" stroke="#fff" stroke-width="1.2" opacity=".5"/><circle cx="13" cy="13" r="3" fill="#9B59B6"/></svg>
+              </span>
               <span class="os-label">CentOS 9</span>
             </div>
             <div class="os-opt" onclick="setOS('AlmaLinux 9', this)">
-              <span class="os-icon"><svg viewBox="0 0 26 26" width="28" height="28"><circle cx="13" cy="13" r="13" fill="#0F2244"/><path d="M13 5 L18 13 L13 21 L8 13Z" fill="#4AA7DC"/><path d="M13 9 L16 13 L13 17 L10 13Z" fill="#0F2244"/></svg></span>
+              <span class="os-icon">
+                <svg viewBox="0 0 26 26" width="28" height="28"><circle cx="13" cy="13" r="13" fill="#0F2244"/><path d="M13 5 L18 13 L13 21 L8 13Z" fill="#4AA7DC"/><path d="M13 9 L16 13 L13 17 L10 13Z" fill="#0F2244"/></svg>
+              </span>
               <span class="os-label">AlmaLinux 9</span>
             </div>
             <div class="os-opt" onclick="setOS('Rocky Linux 9', this)">
-              <span class="os-icon"><svg viewBox="0 0 26 26" width="28" height="28"><circle cx="13" cy="13" r="13" fill="#10B981"/><path d="M9 8 L17 8 L17 18 L9 18Z" fill="none" stroke="#fff" stroke-width="1.8"/><path d="M9 12 L17 12" stroke="#fff" stroke-width="1.5"/></svg></span>
+              <span class="os-icon">
+                <svg viewBox="0 0 26 26" width="28" height="28"><circle cx="13" cy="13" r="13" fill="#10B981"/><path d="M9 8 L17 8 L17 18 L9 18Z" fill="none" stroke="#fff" stroke-width="1.8"/><path d="M9 12 L17 12" stroke="#fff" stroke-width="1.5"/></svg>
+              </span>
               <span class="os-label">Rocky Linux 9</span>
             </div>
             <div class="os-opt" onclick="setOS('Windows Server 2025', this)">
-              <span class="os-icon"><svg viewBox="0 0 26 26" width="28" height="28"><rect width="26" height="26" rx="5" fill="#0078D4"/><rect x="4" y="4" width="8.5" height="8.5" fill="#fff"/><rect x="13.5" y="4" width="8.5" height="8.5" fill="#fff"/><rect x="4" y="13.5" width="8.5" height="8.5" fill="#fff"/><rect x="13.5" y="13.5" width="8.5" height="8.5" fill="#fff"/></svg></span>
+              <span class="os-icon">
+                <svg viewBox="0 0 26 26" width="28" height="28"><rect width="26" height="26" rx="5" fill="#0078D4"/><rect x="4" y="4" width="8.5" height="8.5" fill="#fff"/><rect x="13.5" y="4" width="8.5" height="8.5" fill="#fff"/><rect x="4" y="13.5" width="8.5" height="8.5" fill="#fff"/><rect x="13.5" y="13.5" width="8.5" height="8.5" fill="#fff"/></svg>
+              </span>
               <span class="os-label">Windows 2025</span>
             </div>
             <div class="os-opt" onclick="setOS('Windows Server 2022', this)">
-              <span class="os-icon"><svg viewBox="0 0 26 26" width="28" height="28"><rect width="26" height="26" rx="5" fill="#0078D4"/><rect x="4" y="4" width="8.5" height="8.5" fill="#fff"/><rect x="13.5" y="4" width="8.5" height="8.5" fill="#fff"/><rect x="4" y="13.5" width="8.5" height="8.5" fill="#fff"/><rect x="13.5" y="13.5" width="8.5" height="8.5" fill="#fff"/></svg></span>
+              <span class="os-icon">
+                <svg viewBox="0 0 26 26" width="28" height="28"><rect width="26" height="26" rx="5" fill="#0078D4"/><rect x="4" y="4" width="8.5" height="8.5" fill="#fff"/><rect x="13.5" y="4" width="8.5" height="8.5" fill="#fff"/><rect x="4" y="13.5" width="8.5" height="8.5" fill="#fff"/><rect x="13.5" y="13.5" width="8.5" height="8.5" fill="#fff"/></svg>
+              </span>
               <span class="os-label">Windows 2022</span>
             </div>
             <div class="os-opt" onclick="setOS('Fedora 40', this)">
-              <span class="os-icon"><svg viewBox="0 0 26 26" width="28" height="28"><circle cx="13" cy="13" r="13" fill="#294172"/><circle cx="13" cy="11" r="5" fill="none" stroke="#60B0F4" stroke-width="2"/><path d="M13 11 L13 20" stroke="#60B0F4" stroke-width="2"/><path d="M9 11 L17 11" stroke="#60B0F4" stroke-width="2"/></svg></span>
+              <span class="os-icon">
+                <svg viewBox="0 0 26 26" width="28" height="28"><circle cx="13" cy="13" r="13" fill="#294172"/><circle cx="13" cy="11" r="5" fill="none" stroke="#60B0F4" stroke-width="2"/><path d="M13 11 L13 20" stroke="#60B0F4" stroke-width="2"/><path d="M9 11 L17 11" stroke="#60B0F4" stroke-width="2"/></svg>
+              </span>
               <span class="os-label">Fedora 40</span>
             </div>
             <div class="os-opt" onclick="setOS('FreeBSD 14', this)">
-              <span class="os-icon"><svg viewBox="0 0 26 26" width="28" height="28"><circle cx="13" cy="13" r="13" fill="#E30613"/><path d="M13 4 L22 13 L13 22 L4 13Z" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="13" cy="13" r="2.5" fill="#fff"/></svg></span>
+              <span class="os-icon">
+                <svg viewBox="0 0 26 26" width="28" height="28"><circle cx="13" cy="13" r="13" fill="#E30613"/><path d="M13 4 L22 13 L13 22 L4 13Z" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="13" cy="13" r="2.5" fill="#fff"/></svg>
+              </span>
               <span class="os-label">FreeBSD 14</span>
             </div>
             <div class="os-opt" onclick="setOS('Docker Ready', this)">
-              <span class="os-icon"><svg viewBox="0 0 26 26" width="28" height="28"><rect width="26" height="26" rx="5" fill="#2496ED"/><rect x="3" y="13" width="20" height="7" rx="2" fill="#fff"/><rect x="5" y="10" width="4" height="4" rx="1" fill="#fff"/><rect x="11" y="10" width="4" height="4" rx="1" fill="#fff"/><rect x="11" y="5" width="4" height="4" rx="1" fill="#fff"/></svg></span>
+              <span class="os-icon">
+                <svg viewBox="0 0 26 26" width="28" height="28"><rect width="26" height="26" rx="5" fill="#2496ED"/><rect x="3" y="13" width="20" height="7" rx="2" fill="#fff"/><rect x="5" y="10" width="4" height="4" rx="1" fill="#fff"/><rect x="11" y="10" width="4" height="4" rx="1" fill="#fff"/><rect x="11" y="5" width="4" height="4" rx="1" fill="#fff"/></svg>
+              </span>
               <span class="os-label">Docker Ready</span>
             </div>
             <div class="os-opt" onclick="setOS('Свой ISO', this)">
@@ -750,7 +570,6 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:24px 16p
   </div>
 </section>
 
-<!-- ===== TARIFFS ===== -->
 <section id="tariffs" style="background:var(--bg2)">
   <div class="container">
     <div class="section-tag">📊 Тарифы</div>
@@ -769,7 +588,6 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:24px 16p
   </div>
 </section>
 
-<!-- ===== FEATURES ===== -->
 <section id="features" style="background:var(--bg)">
   <div class="container">
     <div class="section-tag">✨ Возможности</div>
@@ -786,7 +604,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:24px 16p
   </div>
 </section>
 
-<!-- ===== CART ===== -->
+<!-- КОРЗИНА -->
 <div class="cart-overlay" id="cartOverlay">
   <div class="cart-modal">
     <div class="cart-header"><h2>🛒 Корзина</h2><button class="cart-close" onclick="toggleCart()">✕</button></div>
@@ -798,7 +616,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:24px 16p
   </div>
 </div>
 
-<!-- ===== ORDER ===== -->
+<!-- ЗАКАЗ -->
 <div class="order-overlay" id="orderOverlay">
   <div class="order-modal">
     <div class="cart-header"><h2>📋 Оформление заказа</h2><button class="cart-close" onclick="closeOrder()">✕</button></div>
@@ -813,61 +631,16 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:24px 16p
   </div>
 </div>
 
-<!-- ===== FOOTER ===== -->
+<!-- ФУТЕР -->
 <footer>
   <div class="footer-grid">
-    <div class="footer-col">
-      <div class="footer-logo-bottom">⚡ VoltNode</div>
-      <div class="footer-tagline-bottom">Виртуальные серверы мирового уровня</div>
-      <div style="font-size:10px;color:var(--text3)">Работаем с 2015 года</div>
-      <div style="font-size:10px;color:var(--text3);margin-top:2px">ИНН 772345678901 · ОГРН 1157746554321</div>
-    </div>
-    <div class="footer-col">
-      <h4>Продукты</h4>
-      <ul>
-        <li onclick="openDoc('products')">VPS/VDS серверы</li>
-        <li onclick="openDoc('products')">Выделенные серверы</li>
-        <li onclick="openDoc('products')">Облачное хранилище</li>
-        <li onclick="openDoc('products')">Базы данных</li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Компания</h4>
-      <ul>
-        <li onclick="openDoc('about')">О нас</li>
-        <li onclick="openDoc('news')">Новости</li>
-        <li onclick="openDoc('careers')">Карьера</li>
-        <li onclick="openDoc('contacts')">Контакты</li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Поддержка</h4>
-      <ul>
-        <li onclick="openDoc('support')">Документация</li>
-        <li onclick="openDoc('support')">FAQ</li>
-        <li onclick="openDoc('support')">Статус системы</li>
-        <li onclick="openDoc('support')">API</li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Партнёрам</h4>
-      <ul>
-        <li onclick="openDoc('partners')">Партнёрская программа</li>
-        <li onclick="openDoc('partners')">Стать партнёром</li>
-        <li onclick="openDoc('partners')">Условия</li>
-        <li onclick="openDoc('partners')">Выплаты</li>
-      </ul>
-    </div>
+    <div class="footer-col"><div class="footer-logo-bottom">⚡ VoltNode</div><div class="footer-tagline-bottom">Виртуальные серверы мирового уровня</div><div style="font-size:10px;color:var(--text3)">Работаем с 2015 года</div><div style="font-size:10px;color:var(--text3);margin-top:2px">ИНН 772345678901 · ОГРН 1157746554321</div></div>
+    <div class="footer-col"><h4>Продукты</h4><ul><li>VPS/VDS серверы</li><li>Выделенные серверы</li><li>Облачное хранилище</li><li>Базы данных</li></ul></div>
+    <div class="footer-col"><h4>Компания</h4><ul><li>О нас</li><li>Новости</li><li>Карьера</li><li>Контакты</li></ul></div>
+    <div class="footer-col"><h4>Поддержка</h4><ul><li>Документация</li><li>FAQ</li><li>Статус системы</li><li>API</li></ul></div>
+    <div class="footer-col"><h4>Правовая информация</h4><ul><li>Публичная оферта</li><li>Политика конфиденциальности</li><li>Возврат средств</li><li>SLA</li></ul></div>
   </div>
-  <div class="footer-bottom">
-    <span>© 2026 VoltNode - Все права защищены</span>
-    <div class="legal">
-      <a onclick="openDoc('about')">О нас</a>
-      <a onclick="openDoc('contacts')">Контакты</a>
-      <a onclick="openDoc('support')">Поддержка</a>
-      <a onclick="openDoc('partners')">Партнёрам</a>
-    </div>
-  </div>
+  <div class="footer-bottom"><span>© 2026 VoltNode - Все права защищены</span><div class="legal"><a href="#" onclick="openDoc('oferta')">Оферта</a><a href="#" onclick="openDoc('privacy')">Конфиденциальность</a><a href="#" onclick="openDoc('refund')">Возврат</a><a href="#" onclick="openDoc('sla')">SLA</a></div></div>
 </footer>
 
 <script>
@@ -905,13 +678,7 @@ var tariffTemplates = {
   7:{label:'Ultra',cpu:32,ram:64,ssd:1000,traffic:9999,price:11990},
   8:{label:'Mega',cpu:64,ram:128,ssd:2000,traffic:9999,price:24990}
 };
-var cart = JSON.parse(localStorage.getItem('voltnode_cart') || '[]');
-var cartIdCounter = cart.length;
-
-// ===== СОХРАНЕНИЕ КОРЗИНЫ =====
-function saveCart(){
-    localStorage.setItem('voltnode_cart', JSON.stringify(cart));
-}
+var cart = [];
 
 // ===== ТИКЕР =====
 function buildTrack(){
@@ -1002,33 +769,9 @@ function setSSD(v){document.getElementById('ssdSlider').value=v;updateConfig()}
 function setTraffic(v){document.getElementById('trafficSlider').value=v;updateConfig()}
 function setOS(os,el){document.querySelectorAll('.os-opt').forEach(function(o){o.classList.remove('active')});if(el)el.classList.add('active');config.os=os;document.getElementById('summaryOS').textContent=os;}
 
-// ===== ДОКУМЕНТАЦИЯ =====
-function openDoc(type){
-    var pages = {
-        'about': 'docAbout',
-        'news': 'docNews',
-        'careers': 'docCareers',
-        'products': 'docProducts',
-        'support': 'docSupport',
-        'partners': 'docPartners',
-        'contacts': 'docContacts'
-    };
-    var id = pages[type];
-    if(id){
-        document.querySelectorAll('.doc-page').forEach(function(el){el.classList.remove('open')});
-        document.getElementById(id).classList.add('open');
-        document.body.style.overflow = 'hidden';
-    }
-}
-
-function closeDoc(){
-    document.querySelectorAll('.doc-page').forEach(function(el){el.classList.remove('open')});
-    document.body.style.overflow = 'auto';
-}
-
 // ===== КОРЗИНА =====
-function addTariffToCart(id){var t=tariffTemplates[id];if(!t)return;cart.push({id:'t_'+Date.now()+'_'+Math.random().toString(36).substr(2,4),label:t.label,cpu:t.cpu,ram:t.ram,ssd:t.ssd,traffic:t.traffic,price:t.price,isTariff:true});saveCart();updateCartUI();showNotification('✅ '+t.label+' добавлен','success');}
-function addToCart(){var price=calculatePrice(),s=servers[config.countryIndex];cart.push({id:'c_'+Date.now()+'_'+Math.random().toString(36).substr(2,4),label:'Кастомный сервер',cpu:config.cpu,ram:config.ram,ssd:config.ssd,traffic:config.traffic,os:config.os,location:config.countryFlag+' '+config.countryName,ping:config.countryPing,price:price,isTariff:false});saveCart();updateCartUI();showNotification('✅ Кастомный сервер добавлен','success');}
+function addTariffToCart(id){var t=tariffTemplates[id];if(!t)return;cart.push({id:'t_'+Date.now()+'_'+Math.random().toString(36).substr(2,4),label:t.label,cpu:t.cpu,ram:t.ram,ssd:t.ssd,traffic:t.traffic,price:t.price,isTariff:true});updateCartUI();showNotification('✅ '+t.label+' добавлен','success');}
+function addToCart(){var price=calculatePrice(),s=servers[config.countryIndex];cart.push({id:'c_'+Date.now()+'_'+Math.random().toString(36).substr(2,4),label:'Кастомный сервер',cpu:config.cpu,ram:config.ram,ssd:config.ssd,traffic:config.traffic,os:config.os,location:config.countryFlag+' '+config.countryName,ping:config.countryPing,price:price,isTariff:false});updateCartUI();showNotification('✅ Кастомный сервер добавлен','success');}
 function updateCartUI(){
   document.getElementById('cartCount').textContent=cart.length;
   var items=document.getElementById('cartItems'), footer=document.getElementById('cartFooter');
@@ -1037,15 +780,69 @@ function updateCartUI(){
   for(var i=0;i<cart.length;i++){var p=cart[i];total+=p.price;var specs=p.isTariff?p.cpu+' vCPU · '+p.ram+' ГБ · '+p.ssd+' ГБ':p.cpu+' vCPU · '+p.ram+' ГБ · '+p.ssd+' ГБ · '+p.os+' · '+p.location+' ('+p.ping+' мс)';html+='<div class="cart-item"><div><div class="cart-item-top"><span class="cart-item-name">'+p.label+'</span><span class="cart-item-price">'+p.price+' ₽</span></div><div class="cart-item-specs">'+specs+'</div></div><button class="cart-item-remove" onclick="removeFromCart('+i+')">✕</button></div>';}
   items.innerHTML=html;document.getElementById('cartTotal').textContent=total+' ₽';footer.style.display='block';
 }
-function removeFromCart(i){cart.splice(i,1);saveCart();updateCartUI();showNotification('🗑️ Товар удален','info');}
-function clearCart(){if(cart.length===0)return;cart=[];saveCart();updateCartUI();showNotification('🗑️ Корзина очищена','info');}
+function removeFromCart(i){cart.splice(i,1);updateCartUI();showNotification('🗑️ Товар удален','info');}
+function clearCart(){if(cart.length===0)return;cart=[];updateCartUI();showNotification('🗑️ Корзина очищена','info');}
 function toggleCart(){document.getElementById('cartOverlay').classList.toggle('open');}
 function openOrder(){if(cart.length===0){showNotification('⚠️ Корзина пуста','warning');return}document.getElementById('cartOverlay').classList.remove('open');document.getElementById('orderOverlay').classList.add('open');var total=0;for(var i=0;i<cart.length;i++)total+=cart[i].price;document.getElementById('orderCount').textContent=cart.length;document.getElementById('orderTotal').textContent=total+' ₽';}
 function closeOrder(){document.getElementById('orderOverlay').classList.remove('open');}
-function submitOrder(e){e.preventDefault();var name=document.getElementById('orderName').value.trim(),email=document.getElementById('orderEmail').value.trim();if(!name||!email){showNotification('⚠️ Заполните имя и email','warning');return}var btn=document.getElementById('submitBtn');btn.disabled=true;btn.innerHTML='⏳ Обработка...';setTimeout(function(){showNotification('🎉 Заказ оформлен! Проверьте почту.','success');cart=[];saveCart();updateCartUI();closeOrder();btn.disabled=false;btn.innerHTML='✅ Оплатить заказ';document.getElementById('orderForm').reset();},2000);}
+function submitOrder(e){e.preventDefault();var name=document.getElementById('orderName').value.trim(),email=document.getElementById('orderEmail').value.trim();if(!name||!email){showNotification('⚠️ Заполните имя и email','warning');return}var btn=document.getElementById('submitBtn');btn.disabled=true;btn.innerHTML='⏳ Обработка...';setTimeout(function(){showNotification('🎉 Заказ успешно оформлен! Проверьте почту.','success');cart=[];updateCartUI();closeOrder();btn.disabled=false;btn.innerHTML='✅ Оплатить заказ';document.getElementById('orderForm').reset();},2000);}
 function showNotification(text,type){var el=document.getElementById('notification'),icon=document.getElementById('notifIcon'),textEl=document.getElementById('notifText');el.className='notification '+(type||'success');icon.textContent=type==='success'?'✅':type==='warning'?'⚠️':'ℹ️';textEl.textContent=text;el.classList.add('show');clearTimeout(el._timer);el._timer=setTimeout(function(){el.classList.remove('show')},3500);}
 
-// ===== MOBILE =====
+function openDoc(type){alert('📄 Документация: '+type+'\n\nПолный текст документа доступен по запросу.');}
+
+// ===== ОПЛАТА (НАПРЯМУЮ, БЕЗ ТЕЛЕФОНА) =====
+function processPayment(amount) {
+    if (!amount || amount < 1) {
+        showNotification('❌ Укажите корректную сумму', 'error');
+        return;
+    }
+    
+    // Ваш номер кошелька
+    const receiver = "4100119492575961";
+    
+    // Показываем уведомление
+    showNotification('⏳ Создание ссылки для оплаты...', 'info');
+    
+    // Создаём ссылку на оплату с фиксированной суммой
+    const paymentUrl = "https://yoomoney.ru/quickpay/confirm.xml" +
+        "?receiver=" + receiver +
+        "&quickpay-form=shop" +
+        "&targets=" + encodeURIComponent("Оплата VPS сервера") +
+        "&paymentType=SB" +
+        "&sum=" + amount +
+        "&label=order_" + Date.now() +
+        "&successURL=" + encodeURIComponent(window.location.href);
+    
+    // Открываем оплату в новой вкладке
+    window.open(paymentUrl, "_blank");
+}
+
+// ===== ПРИВЯЗКА К КНОПКЕ =====
+document.addEventListener('DOMContentLoaded', function() {
+    // Находим кнопку "Оплатить заказ" в форме заказа
+    const submitBtn = document.getElementById('submitBtn');
+    if (submitBtn) {
+        submitBtn.addEventListener('click', function(e) {
+            // Если форма уже отправлена, не мешаем
+            if (this.disabled) return;
+            
+            // Получаем сумму из корзины
+            const totalElement = document.getElementById('cartTotal');
+            if (totalElement) {
+                const totalText = totalElement.textContent;
+                const amount = parseFloat(totalText.replace(/[^0-9.]/g, ''));
+                if (amount && amount > 0) {
+                    // Отменяем стандартную отправку формы
+                    e.preventDefault();
+                    // Открываем оплату
+                    processPayment(amount);
+                }
+            }
+        });
+    }
+});
+
+// ===== MOBILE MENU =====
 function toggleMobileMenu(){document.getElementById('mobileMenu').classList.toggle('open');}
 function closeMobileMenu(){document.getElementById('mobileMenu').classList.remove('open');}
 
@@ -1053,7 +850,6 @@ function closeMobileMenu(){document.getElementById('mobileMenu').classList.remov
 buildTrack();
 setCountry();
 updateConfig();
-updateCartUI();
 setInterval(updatePings,2500);
 console.log('⚡ VoltNode запущен!');
 </script>
