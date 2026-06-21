@@ -4,6 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>VoltNode - VPS/VDS конструктор</title>
+
+<!-- ===== НОВЫЙ ЛОГОТИП НА ВКЛАДКЕ (FAVICON) ===== -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%238B6CF5'/%3E%3Cstop offset='100%25' style='stop-color:%235B8EF0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='36' height='36' rx='10' fill='url(%23g)'/%3E%3Crect x='7' y='9' width='22' height='4' rx='1.5' fill='white' opacity='0.95'/%3E%3Crect x='9' y='11' width='4' height='2' rx='0.5' fill='%238B6CF5' opacity='0.6'/%3E%3Crect x='15' y='11' width='4' height='2' rx='0.5' fill='%238B6CF5' opacity='0.6'/%3E%3Crect x='21' y='11' width='4' height='2' rx='0.5' fill='%238B6CF5' opacity='0.6'/%3E%3Crect x='7' y='16' width='22' height='4' rx='1.5' fill='white' opacity='0.95'/%3E%3Crect x='9' y='18' width='4' height='2' rx='0.5' fill='%238B6CF5' opacity='0.6'/%3E%3Crect x='15' y='18' width='4' height='2' rx='0.5' fill='%238B6CF5' opacity='0.6'/%3E%3Crect x='21' y='18' width='4' height='2' rx='0.5' fill='%238B6CF5' opacity='0.6'/%3E%3Crect x='7' y='23' width='22' height='4' rx='1.5' fill='white' opacity='0.95'/%3E%3Crect x='9' y='25' width='4' height='2' rx='0.5' fill='%238B6CF5' opacity='0.6'/%3E%3Crect x='15' y='25' width='4' height='2' rx='0.5' fill='%238B6CF5' opacity='0.6'/%3E%3Crect x='21' y='25' width='4' height='2' rx='0.5' fill='%238B6CF5' opacity='0.6'/%3E%3Ccircle cx='30' cy='11' r='1.5' fill='%2319E394'/%3E%3Ccircle cx='30' cy='18' r='1.5' fill='%2319E394'/%3E%3Ccircle cx='30' cy='25' r='1.5' fill='%2319E394'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%238B6CF5'/%3E%3Cstop offset='100%25' style='stop-color:%235B8EF0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='36' height='36' rx='10' fill='url(%23g)'/%3E%3Crect x='7' y='9' width='22' height='4' rx='1.5' fill='white' opacity='0.95'/%3E%3Crect x='9' y='11' width='4' height='2' rx='0.5' fill='%238B6CF5' opacity='0.6'/%3E%3Crect x='15' y='11' width='4' height='2' rx='0.5' fill='%238B6CF5' opacity='0.6'/%3E%3Crect x='21' y='11' width='4' height='2' rx='0.5' fill='%238B6CF5' opacity='0.6'/%3E%3Crect x='7' y='16' width='22' height='4' rx='1.5' fill='white' opacity='0.95'/%3E%3Crect x='9' y='18' width='4' height='2' rx='0.5' fill='%238B6CF5' opacity='0.6'/%3E%3Crect x='15' y='18' width='4' height='2' rx='0.5' fill='%238B6CF5' opacity='0.6'/%3E%3Crect x='21' y='18' width='4' height='2' rx='0.5' fill='%238B6CF5' opacity='0.6'/%3E%3Crect x='7' y='23' width='22' height='4' rx='1.5' fill='white' opacity='0.95'/%3E%3Crect x='9' y='25' width='4' height='2' rx='0.5' fill='%238B6CF5' opacity='0.6'/%3E%3Crect x='15' y='25' width='4' height='2' rx='0.5' fill='%238B6CF5' opacity='0.6'/%3E%3Crect x='21' y='25' width='4' height='2' rx='0.5' fill='%238B6CF5' opacity='0.6'/%3E%3Ccircle cx='30' cy='11' r='1.5' fill='%2319E394'/%3E%3Ccircle cx='30' cy='18' r='1.5' fill='%2319E394'/%3E%3Ccircle cx='30' cy='25' r='1.5' fill='%2319E394'/%3E%3C/svg%3E">
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -16,17 +21,26 @@ nav{position:sticky;top:0;z-index:100;background:rgba(8,12,23,.95);backdrop-filt
 @media(min-width:768px){nav{padding:0 52px;height:66px}}
 .logo{display:flex;align-items:center;gap:8px;font-size:18px;font-weight:800;letter-spacing:-1px}
 @media(min-width:768px){.logo{font-size:22px;gap:10px}}
-.logo-icon{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-size:14px;box-shadow:0 0 20px rgba(91,142,240,.4)}
-@media(min-width:768px){.logo-icon{width:32px;height:32px;font-size:16px}}
-.nav-links{display:flex;gap:24px;font-size:14px;color:var(--text2)}
+.logo-icon{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;box-shadow:0 0 20px rgba(91,142,240,.4);background:linear-gradient(135deg,var(--accent),var(--accent2))}
+
+.nav-links{display:none;gap:24px;font-size:14px;color:var(--text2)}
+@media(min-width:900px){.nav-links{display:flex}}
 .nav-links a:hover{color:var(--text)}
-.nav-right{display:flex;gap:10px;align-items:center}
+.nav-right{display:flex;gap:6px;align-items:center}
+@media(min-width:768px){.nav-right{gap:10px}}
+.btn-ghost{padding:6px 12px;border-radius:8px;border:1px solid var(--border2);font-size:12px;color:var(--text2);background:transparent}
+@media(min-width:768px){.btn-ghost{padding:8px 18px;font-size:13px}}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+.btn-primary{padding:6px 14px;border-radius:8px;background:linear-gradient(135deg,var(--accent),var(--accent2));font-size:12px;font-weight:700;color:#fff;border:none;box-shadow:0 4px 20px rgba(91,142,240,.3)}
+@media(min-width:768px){.btn-primary{padding:9px 22px;font-size:13px}}
+.btn-primary:hover{opacity:.9}
 .cart-btn{position:relative;padding:6px 10px;border-radius:8px;border:1px solid var(--border2);background:transparent;color:var(--text2);font-size:16px;display:flex;align-items:center}
+@media(min-width:768px){.cart-btn{padding:8px 12px;font-size:18px}}
 .cart-btn:hover{border-color:var(--accent);color:var(--accent)}
 .cart-count{position:absolute;top:-6px;right:-6px;background:var(--accent);color:#fff;font-size:9px;font-weight:700;width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center}
 @media(min-width:768px){.cart-count{width:20px;height:20px;font-size:10px}}
-.mobile-menu-btn{display:none;background:none;border:none;color:var(--text);font-size:24px;padding:4px}
-@media(max-width:768px){.mobile-menu-btn{display:block}}
+.mobile-menu-btn{display:block;background:none;border:none;color:var(--text);font-size:24px;padding:4px}
+@media(min-width:900px){.mobile-menu-btn{display:none}}
 .mobile-menu{display:none;position:fixed;top:60px;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--border);padding:16px 20px;z-index:99;flex-direction:column;gap:10px}
 @media(min-width:768px){.mobile-menu{top:66px}}
 .mobile-menu.open{display:flex}
@@ -253,20 +267,19 @@ section{padding:30px 16px}
 @media(min-width:768px){.order-modal h2{font-size:19px;margin-bottom:18px}}
 .order-form label{display:block;font-size:11px;font-weight:600;color:var(--text2);margin-bottom:2px}
 @media(min-width:768px){.order-form label{font-size:12px;margin-bottom:3px}}
-.order-form input{width:100%;padding:8px 12px;background:var(--card);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:12px;margin-bottom:10px}
-.order-form input:focus{outline:none;border-color:var(--accent)}
+.order-form input,.order-form select{width:100%;padding:8px 12px;background:var(--card);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:12px;margin-bottom:10px}
+@media(min-width:768px){.order-form input,.order-form select{padding:10px 14px;font-size:13px;margin-bottom:12px;border-radius:8px}}
+.order-form input:focus,.order-form select:focus{outline:none;border-color:var(--accent)}
 .order-summary{background:var(--card);border-radius:8px;padding:10px;margin:8px 0 14px}
+@media(min-width:768px){.order-summary{padding:14px;margin:10px 0 16px;border-radius:10px}}
 .order-summary .line{display:flex;justify-content:space-between;padding:2px 0;font-size:12px}
+@media(min-width:768px){.order-summary .line{padding:3px 0;font-size:13px}}
 .order-summary .total{font-weight:700;font-size:15px;border-top:1px solid var(--border);padding-top:8px;margin-top:4px}
+@media(min-width:768px){.order-summary .total{font-size:17px;padding-top:10px;margin-top:6px}}
 .order-summary .total span:last-child{color:var(--accent)}
-.btn-submit{width:100%;padding:10px;border:none;border-radius:8px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;font-size:13px;font-weight:700;cursor:pointer}
+.btn-submit{width:100%;padding:10px;border:none;border-radius:8px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;font-size:13px;font-weight:700}
+@media(min-width:768px){.btn-submit{padding:12px;font-size:15px;border-radius:10px}}
 .btn-submit:disabled{opacity:.5}
-
-.payment-options{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0}
-.payment-option{padding:10px;border-radius:8px;border:2px solid var(--border);background:transparent;color:var(--text2);font-size:13px;font-weight:600;cursor:pointer;transition:.15s;text-align:center}
-.payment-option:hover{border-color:var(--accent);color:var(--text)}
-.payment-option.active{border-color:var(--accent);background:rgba(91,142,240,.12);color:var(--accent)}
-.payment-option .pay-icon{font-size:24px;display:block;margin-bottom:4px}
 
 .notification{position:fixed;top:65px;right:10px;z-index:999;padding:10px 14px;border-radius:8px;background:var(--card);border:1px solid var(--border);backdrop-filter:blur(12px);box-shadow:0 12px 48px rgba(0,0,0,.5);transform:translateX(120%);transition:.4s cubic-bezier(.16,1,.3,1);max-width:300px;font-size:12px}
 @media(min-width:768px){.notification{top:76px;right:20px;padding:12px 18px;border-radius:10px;max-width:340px;font-size:13px}}
@@ -306,13 +319,45 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:24px 16p
 <body>
 
 <nav>
-  <div class="logo"><div class="logo-icon">⚡</div>VoltNode</div>
+  <div class="logo">
+    <!-- НОВЫЙ ЛОГОТИП: СЕРВЕРНАЯ СТОЙКА (БЕЗ МОЛНИИ) -->
+    <div class="logo-icon">
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+        <defs>
+          <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#8B6CF5"/>
+            <stop offset="100%" style="stop-color:#5B8EF0"/>
+          </linearGradient>
+        </defs>
+        <rect width="36" height="36" rx="10" fill="url(#logoGrad)"/>
+        <!-- Серверная стойка (3 ряда) -->
+        <rect x="7" y="9" width="22" height="4" rx="1.5" fill="white" opacity="0.95"/>
+        <rect x="9" y="11" width="4" height="2" rx="0.5" fill="#8B6CF5" opacity="0.6"/>
+        <rect x="15" y="11" width="4" height="2" rx="0.5" fill="#8B6CF5" opacity="0.6"/>
+        <rect x="21" y="11" width="4" height="2" rx="0.5" fill="#8B6CF5" opacity="0.6"/>
+        <rect x="7" y="16" width="22" height="4" rx="1.5" fill="white" opacity="0.95"/>
+        <rect x="9" y="18" width="4" height="2" rx="0.5" fill="#8B6CF5" opacity="0.6"/>
+        <rect x="15" y="18" width="4" height="2" rx="0.5" fill="#8B6CF5" opacity="0.6"/>
+        <rect x="21" y="18" width="4" height="2" rx="0.5" fill="#8B6CF5" opacity="0.6"/>
+        <rect x="7" y="23" width="22" height="4" rx="1.5" fill="white" opacity="0.95"/>
+        <rect x="9" y="25" width="4" height="2" rx="0.5" fill="#8B6CF5" opacity="0.6"/>
+        <rect x="15" y="25" width="4" height="2" rx="0.5" fill="#8B6CF5" opacity="0.6"/>
+        <rect x="21" y="25" width="4" height="2" rx="0.5" fill="#8B6CF5" opacity="0.6"/>
+        <!-- Индикаторы работы (зелёные точки) -->
+        <circle cx="30" cy="11" r="1.5" fill="#19E394"/>
+        <circle cx="30" cy="18" r="1.5" fill="#19E394"/>
+        <circle cx="30" cy="25" r="1.5" fill="#19E394"/>
+      </svg>
+    </div>
+    VoltNode
+  </div>
   <div class="nav-links">
     <a href="#constructor">Конструктор</a>
     <a href="#tariffs">Тарифы</a>
     <a href="#features">Возможности</a>
   </div>
   <div class="nav-right">
+    <button class="btn-ghost">Войти</button>
     <button class="cart-btn" onclick="toggleCart()">
       <i class="ti ti-shopping-cart"></i>
       <span class="cart-count" id="cartCount">0</span>
@@ -463,6 +508,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:24px 16p
           <div style="font-size:10px;color:var(--text3);margin-top:3px">⚠️ Превышение трафика - 50₽ за 1 ГБ сверх лимита</div>
         </div>
 
+        <!-- ОС С ОФИЦИАЛЬНЫМИ ЛОГОТИПАМИ -->
         <div class="param-group">
           <label>🖥️ Операционная система</label>
           <div class="os-select-grid">
@@ -564,7 +610,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:24px 16p
   <div class="container">
     <div class="section-tag">📊 Тарифы</div>
     <h2 class="section-title">Готовые конфигурации</h2>
-    <p class="section-sub">Локации: Россия, Европа, США, Азия · Производство: Дата-центры Tier III</p>
+    <p class="section-sub">Или настройте свой сервер в конструкторе выше</p>
     <div class="tariffs-grid">
       <div class="tariff-card"><div class="name">Starter</div><div class="price">200 <small>₽/мес</small></div><div class="specs">1 vCPU · 512 MB · 5 ГБ SSD</div><button class="btn-small" onclick="addTariffToCart(1)">Выбрать</button></div>
       <div class="tariff-card"><div class="name">Standard</div><div class="price">390 <small>₽/мес</small></div><div class="specs">1 vCPU · 1 ГБ · 15 ГБ SSD</div><button class="btn-small" onclick="addTariffToCart(2)">Выбрать</button></div>
@@ -594,7 +640,6 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:24px 16p
   </div>
 </section>
 
-<!-- КОРЗИНА -->
 <div class="cart-overlay" id="cartOverlay">
   <div class="cart-modal">
     <div class="cart-header"><h2>🛒 Корзина</h2><button class="cart-close" onclick="toggleCart()">✕</button></div>
@@ -606,7 +651,6 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:24px 16p
   </div>
 </div>
 
-<!-- ЗАКАЗ -->
 <div class="order-overlay" id="orderOverlay">
   <div class="order-modal">
     <div class="cart-header"><h2>📋 Оформление заказа</h2><button class="cart-close" onclick="closeOrder()">✕</button></div>
@@ -614,34 +658,13 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:24px 16p
       <label>Ваше имя *</label><input type="text" id="orderName" placeholder="Иван Иванов" required>
       <label>Email *</label><input type="email" id="orderEmail" placeholder="ivan@example.com" required>
       <label>Телефон</label><input type="tel" id="orderPhone" placeholder="+7 999 123-45-67">
-      
-      <label>Способ оплаты:</label>
-      <div class="payment-options">
-        <div class="payment-option active" onclick="selectPayment('card', this)">
-          <span class="pay-icon">💳</span>
-          Банковская карта
-        </div>
-        <div class="payment-option" onclick="selectPayment('crypto', this)">
-          <span class="pay-icon">₿</span>
-          Криптовалюта
-        </div>
-        <div class="payment-option" onclick="selectPayment('link', this)">
-          <span class="pay-icon">🔗</span>
-          Ссылка на оплату
-        </div>
-      </div>
-      
-      <div class="order-summary">
-        <div class="line"><span>Товаров:</span><span id="orderCount">0</span></div>
-        <div class="line total"><span>Итого к оплате:</span><span id="orderTotal">0 ₽</span></div>
-      </div>
-      
-      <button type="submit" class="btn-submit" id="submitBtn">💳 Перейти к оплате</button>
+      <label>Комментарий</label><input type="text" id="orderComment" placeholder="Особые пожелания...">
+      <div class="order-summary"><div class="line"><span>Товаров:</span><span id="orderCount">0</span></div><div class="line total"><span>Итого к оплате:</span><span id="orderTotal">0 ₽</span></div></div>
+      <button type="submit" class="btn-submit" id="submitBtn">✅ Оплатить заказ</button>
     </form>
   </div>
 </div>
 
-<!-- ФУТЕР -->
 <footer>
   <div class="footer-grid">
     <div class="footer-col"><div class="footer-logo-bottom">⚡ VoltNode</div><div class="footer-tagline-bottom">Виртуальные серверы мирового уровня</div><div style="font-size:10px;color:var(--text3)">Работаем с 2015 года</div><div style="font-size:10px;color:var(--text3);margin-top:2px">ИНН 772345678901 · ОГРН 1157746554321</div></div>
@@ -689,8 +712,6 @@ var tariffTemplates = {
   8:{label:'Mega',cpu:64,ram:128,ssd:2000,traffic:9999,price:24990}
 };
 var cart = [];
-var selectedPayment = 'card';
-var currentOrderId = null;
 
 // ===== ТИКЕР =====
 function buildTrack(){
@@ -781,17 +802,6 @@ function setSSD(v){document.getElementById('ssdSlider').value=v;updateConfig()}
 function setTraffic(v){document.getElementById('trafficSlider').value=v;updateConfig()}
 function setOS(os,el){document.querySelectorAll('.os-opt').forEach(function(o){o.classList.remove('active')});if(el)el.classList.add('active');config.os=os;document.getElementById('summaryOS').textContent=os;}
 
-// ===== ВЫБОР ОПЛАТЫ =====
-function selectPayment(method, el){
-  document.querySelectorAll('.payment-option').forEach(function(o){o.classList.remove('active')});
-  if(el)el.classList.add('active');
-  selectedPayment = method;
-  
-  var btn = document.getElementById('submitBtn');
-  var icons = {card:'💳', crypto:'₿', link:'🔗'};
-  btn.innerHTML = icons[method] + ' Перейти к оплате';
-}
-
 // ===== КОРЗИНА =====
 function addTariffToCart(id){var t=tariffTemplates[id];if(!t)return;cart.push({id:'t_'+Date.now()+'_'+Math.random().toString(36).substr(2,4),label:t.label,cpu:t.cpu,ram:t.ram,ssd:t.ssd,traffic:t.traffic,price:t.price,isTariff:true});updateCartUI();showNotification('✅ '+t.label+' добавлен','success');}
 function addToCart(){var price=calculatePrice(),s=servers[config.countryIndex];cart.push({id:'c_'+Date.now()+'_'+Math.random().toString(36).substr(2,4),label:'Кастомный сервер',cpu:config.cpu,ram:config.ram,ssd:config.ssd,traffic:config.traffic,os:config.os,location:config.countryFlag+' '+config.countryName,ping:config.countryPing,price:price,isTariff:false});updateCartUI();showNotification('✅ Кастомный сервер добавлен','success');}
@@ -808,8 +818,12 @@ function clearCart(){if(cart.length===0)return;cart=[];updateCartUI();showNotifi
 function toggleCart(){document.getElementById('cartOverlay').classList.toggle('open');}
 function openOrder(){if(cart.length===0){showNotification('⚠️ Корзина пуста','warning');return}document.getElementById('cartOverlay').classList.remove('open');document.getElementById('orderOverlay').classList.add('open');var total=0;for(var i=0;i<cart.length;i++)total+=cart[i].price;document.getElementById('orderCount').textContent=cart.length;document.getElementById('orderTotal').textContent=total+' ₽';}
 function closeOrder(){document.getElementById('orderOverlay').classList.remove('open');}
+function submitOrder(e){e.preventDefault();var name=document.getElementById('orderName').value.trim(),email=document.getElementById('orderEmail').value.trim();if(!name||!email){showNotification('⚠️ Заполните имя и email','warning');return}var btn=document.getElementById('submitBtn');btn.disabled=true;btn.innerHTML='⏳ Обработка...';setTimeout(function(){showNotification('🎉 Заказ успешно оформлен! Проверьте почту.','success');cart=[];updateCartUI();closeOrder();btn.disabled=false;btn.innerHTML='✅ Оплатить заказ';document.getElementById('orderForm').reset();},2000);}
+function showNotification(text,type){var el=document.getElementById('notification'),icon=document.getElementById('notifIcon'),textEl=document.getElementById('notifText');el.className='notification '+(type||'success');icon.textContent=type==='success'?'✅':type==='warning'?'⚠️':'ℹ️';textEl.textContent=text;el.classList.add('show');clearTimeout(el._timer);el._timer=setTimeout(function(){el.classList.remove('show')},3500);}
 
-// ===== ОПЛАТА (НАПРЯМУЮ, БЕЗ ТЕЛЕФОНА) =====
+function openDoc(type){alert('📄 Документация: '+type+'\n\nПолный текст документа доступен по запросу.');}
+
+// ===== ОПЛАТА ЧЕРЕЗ ЮMoney (прямая ссылка) =====
 function processPayment(amount) {
     if (!amount || amount < 1) {
         showNotification('❌ Укажите корректную сумму', 'error');
@@ -817,68 +831,38 @@ function processPayment(amount) {
     }
     
     var receiver = "4100119492575961";
+    showNotification('⏳ Создание ссылки для оплаты...', 'info');
+    
     var paymentUrl = "https://yoomoney.ru/quickpay/confirm.xml" +
         "?receiver=" + receiver +
         "&quickpay-form=shop" +
-        "&targets=" + encodeURIComponent("Оплата VPS сервера №" + Date.now()) +
+        "&targets=" + encodeURIComponent("Оплата VPS сервера") +
         "&paymentType=SB" +
         "&sum=" + amount +
         "&label=order_" + Date.now() +
         "&successURL=" + encodeURIComponent(window.location.href);
     
-    showNotification('⏳ Перенаправление на оплату...', 'info');
-    
-    setTimeout(function(){
-        window.open(paymentUrl, "_blank");
-        showNotification('💰 Ссылка на оплату открыта!', 'success');
-    }, 500);
+    window.open(paymentUrl, "_blank");
 }
 
-// ===== ОТПРАВКА ЗАКАЗА =====
-function submitOrder(e){
-  e.preventDefault();
-  var name=document.getElementById('orderName').value.trim();
-  var email=document.getElementById('orderEmail').value.trim();
-  if(!name||!email){showNotification('⚠️ Заполните имя и email','warning');return;}
-  if(cart.length===0){showNotification('⚠️ Корзина пуста','warning');return;}
-  
-  var btn=document.getElementById('submitBtn');
-  btn.disabled=true;
-  btn.innerHTML='⏳ Обработка...';
-  
-  var total=0;
-  for(var i=0;i<cart.length;i++){total+=cart[i].price;}
-  
-  var orderData = {
-    name: name,
-    email: email,
-    phone: document.getElementById('orderPhone').value.trim(),
-    items: cart.map(function(item){return item.label + ' (' + item.price + ' ₽)';}).join(', '),
-    total: total,
-    payment: selectedPayment,
-    date: new Date().toLocaleString()
-  };
-  
-  console.log('📋 Заказ:', orderData);
-  
-  setTimeout(function(){
-    showNotification('✅ Заказ оформлен! Перенаправление на оплату...', 'success');
-    btn.innerHTML='⏳ Перенаправление...';
-    setTimeout(function(){
-      processPayment(total);
-      btn.disabled=false;
-      btn.innerHTML='💳 Перейти к оплате';
-      closeOrder();
-    }, 1000);
-  }, 1000);
-}
+document.addEventListener('DOMContentLoaded', function() {
+    var submitBtn = document.getElementById('submitBtn');
+    if (submitBtn) {
+        submitBtn.addEventListener('click', function(e) {
+            if (this.disabled) return;
+            var totalElement = document.getElementById('cartTotal');
+            if (totalElement) {
+                var totalText = totalElement.textContent;
+                var amount = parseFloat(totalText.replace(/[^0-9.]/g, ''));
+                if (amount && amount > 0) {
+                    e.preventDefault();
+                    processPayment(amount);
+                }
+            }
+        });
+    }
+});
 
-// ===== УВЕДОМЛЕНИЯ =====
-function showNotification(text,type){var el=document.getElementById('notification'),icon=document.getElementById('notifIcon'),textEl=document.getElementById('notifText');el.className='notification '+(type||'success');icon.textContent=type==='success'?'✅':type==='warning'?'⚠️':'ℹ️';textEl.textContent=text;el.classList.add('show');clearTimeout(el._timer);el._timer=setTimeout(function(){el.classList.remove('show')},3500);}
-
-function openDoc(type){alert('📄 Документация: '+type+'\n\nПолный текст документа доступен по запросу.');}
-
-// ===== MOBILE MENU =====
 function toggleMobileMenu(){document.getElementById('mobileMenu').classList.toggle('open');}
 function closeMobileMenu(){document.getElementById('mobileMenu').classList.remove('open');}
 
